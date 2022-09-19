@@ -19,7 +19,7 @@ void PrintArr(string[] array)
 string[] FillNewArr(string[] array, int min, int max)
 {
     Random rnd = new Random();
-    int newSize = rnd.Next(min, max);
+    int newSize = rnd.Next(min, max+1);
     string[] newArr = new string[newSize];
     for (int i = 0; i < newSize; i++)
     {
@@ -30,7 +30,7 @@ string[] FillNewArr(string[] array, int min, int max)
 
 Console.Write("Current array =>");
 PrintArr(arrstring);
-string [] newArray = FillNewArr(arrstring, 1, 3);
+string[] newArray = FillNewArr(arrstring, 1, 3);
 Console.WriteLine();
 Console.Write("new array =>");
 PrintArr(newArray);
